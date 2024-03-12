@@ -139,15 +139,16 @@ Langkah langkah pra_pemrosesan data:
     TF-IDF biasa digunakan ketika kita ingin mengubah data teks menjadi vektor namun dengan memperhatikan apakah sebuah kata tersebut cukup informatif atau tidak. Mudahnya, TF-IDF membuat kata yang sering muncul memiliki nilai yang cenderung kecil, sedangkan untuk kata yang semakin jarang muncul akan memiliki nilai yang cenderung besar. Kata yang sering muncul disebut juga Stopwords biasanya dianggap kurang penting, salah satu contohnya adalah kata hubung (yang, di, akan, dengan, dll).
 
     
-    1. _Term Frequency_ (TF)
+     1. _Term Frequency_ (TF)
     _Term Frequency_ (TF) menghitung frekuensi jumlah kemunculan kata pada sebuah dokumen. Karena panjang dari setiap dokumen bisa berbeda-beda, maka umumnya nilai TF ini dibagi dengan panjang dokumen (jumlah seluruh kata pada dokumen).
 
+
     $$ \text{tf}_{t,d} = \frac{\text{tf}_{t,d}}{\text{Total number of terms in document}} $$
+
 
     2. _Inverse Document Frequency_ (IDF)
 
     _Inverse Document Frequency_ (IDF) merupakan nilai untuk mengukur seberapa penting sebuah kata. IDF akan menilai kata yang sering muncul sebagai kata yang kurang penting berdasarkan kemunculan kata tersebut pada seluruh dokumen. Semakin kecil nilai IDF maka akan dianggap semakin tidak penting kata tersebut, begitu pula sebaliknya.[4]
-
     $$ idfd = \log \left( \frac{\text{Number of document}}{\text{Number of document with term } t'} \right) $$
   
 
